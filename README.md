@@ -17,7 +17,7 @@
 
 ### Chapter 5 배열(Array)
 
-- [ ] 1. 배열(array)
+- [x] 1. 배열(array) | 09.14
 - [ ] 2. String 배열
 - [ ] 3. 다차원 배열
 
