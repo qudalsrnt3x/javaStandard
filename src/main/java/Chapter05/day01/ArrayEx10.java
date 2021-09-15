@@ -1,4 +1,4 @@
-package Chapter06.day01;
+package Chapter05.day01;
 
 public class ArrayEx10 {
     public static void main(String[] args) {

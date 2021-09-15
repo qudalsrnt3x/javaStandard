@@ -1,4 +1,4 @@
-package Chapter06.day01;
+package Chapter05.day01;
 
 // 배열의 복사
 public class ArrayEx3 {

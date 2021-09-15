@@ -1,4 +1,4 @@
-package Chapter06.day01;
+package Chapter05.day01;
 
 import java.util.Arrays;
 
