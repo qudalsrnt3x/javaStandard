@@ -18,7 +18,7 @@
 ### Chapter 5 배열(Array)
 
 - [x] 1. 배열(array) | 09.14
-- [ ] 2. String 배열
+- [x] 2. String 배열 | 09.15
 - [ ] 3. 다차원 배열
 
 ### Chapter 6 객체지향 프로그래밍 I
