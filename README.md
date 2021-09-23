@@ -33,7 +33,7 @@
 
 ### Chapter 7 객체지향 프로그래밍 II
 
-- [ ] 10. 상속(inheritance)
+- [x] 10. 상속(inheritance) | 09.23
 - [ ] 11. 오버라이딩(overriding)
 - [ ] 12. package와 import
 - [ ] 13. 제어자(modifier)
