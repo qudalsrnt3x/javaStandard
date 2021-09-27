@@ -36,7 +36,7 @@
 - [x] 10. 상속(inheritance) | 09.23
 - [x] 11. 오버라이딩(overriding) | 09.25
 - [x] 12. package와 import | 09.25
-- [ ] 13. 제어자(modifier)
+- [x] 13. 제어자(modifier)
 - [ ] 14. 다형성(polymorphism)
 - [ ] 15. 추상클래스(abstract class)
 - [ ] 16. 인터페이스(interface)
