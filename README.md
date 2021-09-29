@@ -39,7 +39,7 @@
 - [x] 13. 제어자(modifier) | 09.27
 - [x] 14. 다형성(polymorphism) | 09.27
 - [x] 15. 추상클래스(abstract class) | 09.28
-- [ ] 16. 인터페이스(interface)
+- [x] 16. 인터페이스(interface) | 09.29
 - [ ] 17. 내부 클래스(inner class)
 
 ### Chapter 8 예외처리(Exception Handling)
