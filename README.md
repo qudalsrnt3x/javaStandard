@@ -45,7 +45,7 @@
 ### Chapter 8 예외처리(Exception Handling)
 
 - [x] 18. 예외처리(exception handling) | 10.01
-- [ ] 19. 메서드에 예외 선언하기
+- [x] 19. 메서드에 예외 선언하기 | 10.02
 
 ### Chapter 9 java.lang패키지와 유용한 클래스
 
