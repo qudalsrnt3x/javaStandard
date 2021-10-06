@@ -49,7 +49,7 @@
 
 ### Chapter 9 java.lang패키지와 유용한 클래스
 
-- [ ] 20. java.lang패키지
+- [x] 20. java.lang패키지 | 10.03
 - [ ] 21. 유용한 클래스
 
 ### Chapter 10 날짜와 시간 & 형식화
