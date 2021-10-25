@@ -55,48 +55,48 @@
 
 ### Chapter 11 컬렉션 프레임웍
 
-- [ ] 25. 컬렉션 프레임웍(Collection Framework)
-- [ ] 26. Stack과 Queue
-- [ ] 27. Arrays
-- [ ] 28. HashMap과 Hashtable
-- [ ] 29. 컬렉션 클래스 정리 & 요약
+- [ ] 22. 컬렉션 프레임웍(Collection Framework)
+- [ ] 23. Stack과 Queue
+- [ ] 24. Arrays
+- [ ] 25. HashMap과 Hashtable
+- [ ] 26. 컬렉션 클래스 정리 & 요약
 
 ### Chapter 12 지네릭스, 열거형, 애너테이션
 
-- [ ] 30. 제네릭스(Generics)
-- [ ] 31. 열거형(enums)
-- [ ] 32. 애너테이션(annotation)
+- [ ] 27. 제네릭스(Generics)
+- [ ] 28. 열거형(enums)
+- [ ] 29. 애너테이션(annotation)
 
 ### Chapter 13 쓰레드(Thread)
 
-- [ ] 33. 프로세스와 쓰레드
-- [ ] 34. 쓰레드의 구현과 실행
-- [ ] 35. start()와 run()
-- [ ] 36. 싱글쓰레드와 멀티쓰레드
-- [ ] 37. 쓰레드의 우선순위 
-- [ ] 38. 쓰레드 그룹(thread group)
-- [ ] 39. 데몬 쓰레드(daemon thread)
-- [ ] 40. 쓰레드의 실행제어
-- [ ] 41. 쓰레드의 동기화
+- [ ] 30. 프로세스와 쓰레드
+- [ ] 31. 쓰레드의 구현과 실행
+- [ ] 32. start()와 run()
+- [ ] 33. 싱글쓰레드와 멀티쓰레드
+- [ ] 34. 쓰레드의 우선순위 
+- [ ] 35. 쓰레드 그룹(thread group)
+- [ ] 36. 데몬 쓰레드(daemon thread)
+- [ ] 37. 쓰레드의 실행제어
+- [ ] 38. 쓰레드의 동기화
 
 ### Chapter 14 람다와 스트림
 
-- [ ] 42. 람다식
-- [ ] 43. 스트림(stream)
-- [ ] 44. Optional〈T〉와 OptionalInt
-- [ ] 45. collect()
+- [ ] 39. 람다식
+- [ ] 40. 스트림(stream)
+- [ ] 41. Optional〈T〉와 OptionalInt
+- [ ] 42. collect()
 
 ### Chapter 15 입출력(I/O)
 
-- [ ] 46. 자바에서의 입출력
-- [ ] 47. 바이트기반 스트림
-- [ ] 48. 바이트기반의 보조스트림
-- [ ] 49. 문자기반 스트림
-- [ ] 50. 문자기반의 보조스트림
-- [ ] 51. 표준입출력과 File
-- [ ] 52. 직렬화(Serialization)
+- [ ] 43. 자바에서의 입출력
+- [ ] 44. 바이트기반 스트림
+- [ ] 45. 바이트기반의 보조스트림
+- [ ] 46. 문자기반 스트림
+- [ ] 47. 문자기반의 보조스트림
+- [ ] 48. 표준입출력과 File
+- [ ] 49. 직렬화(Serialization)
 
 ### Chapter 16 네트워킹(Networking)
 
-- [ ] 53. 네트워킹(Networking)
-- [ ] 54. 소켓 프로그래밍
+- [ ] 50. 네트워킹(Networking)
+- [ ] 51. 소켓 프로그래밍
