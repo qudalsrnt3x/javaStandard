@@ -58,8 +58,8 @@
 - [x] 22. 컬렉션 프레임웍(Collection Framework) | 10.25
 - [x] 23. Stack과 Queue | 10.26
 - [x] 24. Arrays | 10.28
-- [ ] 25. HashMap과 Hashtable
-- [ ] 26. 컬렉션 클래스 정리 & 요약
+- [x] 25. HashMap과 Hashtable | 10.29
+- [x] 26. 컬렉션 클래스 정리 & 요약 | 10.30
 
 ### Chapter 12 지네릭스, 열거형, 애너테이션
 

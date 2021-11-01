@@ -57,6 +57,7 @@ public class CollectionsEx {
         ArrayList list2 = list(e);
 
         System.out.println("list2 = " + list2);
+        System.out.println("list2 = " + list2);
 
     }
 }
