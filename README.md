@@ -64,7 +64,7 @@
 ### Chapter 12 지네릭스, 열거형, 애너테이션
 
 - [x] 27. 제네릭스(Generics) | 11.01
-- [ ] 28. 열거형(enums)
+- [x] 28. 열거형(enums) | 11.02
 - [ ] 29. 애너테이션(annotation)
 
 ### Chapter 13 쓰레드(Thread)
