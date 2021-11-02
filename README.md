@@ -63,7 +63,7 @@
 
 ### Chapter 12 지네릭스, 열거형, 애너테이션
 
-- [ ] 27. 제네릭스(Generics)
+- [x] 27. 제네릭스(Generics) | 11.01
 - [ ] 28. 열거형(enums)
 - [ ] 29. 애너테이션(annotation)
 
