@@ -65,7 +65,7 @@
 
 - [x] 27. 제네릭스(Generics) | 11.01
 - [x] 28. 열거형(enums) | 11.02
-- [ ] 29. 애너테이션(annotation)
+- [x] 29. 애너테이션(annotation) | 11.03
 
 ### Chapter 13 쓰레드(Thread)
 
