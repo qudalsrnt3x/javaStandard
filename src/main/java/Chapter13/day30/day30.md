@@ -202,3 +202,136 @@ class ThreadEx8_2 extends Thread {
 - main메서드를 수행하는 쓰레드는 우선순위가 5이므로 main메서드내에서 생성하는 쓰레드의 우선순위는 자동적으로 5가 된다.
 
 #### 멀티코어에서는 우선순위에 차등을 두어 쓰레드를 실행시키는 것이 별 효과가 없다.
+
+<br>
+
+### 쓰레드 그룹 (thread group)
+
+쓰레드 그룹은 서로 관련된 쓰레드를 그룹으로 다루기 위한 것
+
+- 폴더 안에 폴더를 생성할 수 있듯이 쓰레드 그룹에 다른 쓰레드 그룹을 포함시킬 수 있다.
+- 쓰레드 그룹은 보안상의 이유로 도입된 개념
+- 자신이 속한 쓰레드 그룹이나 하위 쓰레드 그룹은 변경할 수 있지만, 다른 쓰레드 그룹의 쓰레드를 변경할 수는 없다.
+- ThreadGroup을 사용해서 생성 가능
+- 모든 쓰레드는 반드시 쓰레드 그룹에 포함되어야 한다. 생성자를 사용하지 않은 쓰레드는 기본적으로 자신을 생성한 쓰레드와 같은 쓰레드 그룹에 속하게 된다.
+
+```java
+package Chapter13.day35;
+
+public class ThreadEx9 {
+    public static void main(String[] args) {
+        ThreadGroup main = Thread.currentThread().getThreadGroup(); // 현재 쓰레드의 그룹을 가져온다.
+        // main쓰레드의 그룹은 main
+        ThreadGroup grp1 = new ThreadGroup("Group1");
+        ThreadGroup grp2 = new ThreadGroup("Group2");
+
+//        ThreadGroup(ThreadGroup, parent, String, name)
+        ThreadGroup subGrp1 = new ThreadGroup(grp1, "SubGroup1");   // grp1의 하위 쓰레드 그룹 생성
+
+        grp1.setMaxPriority(3); // 쓰레드 그룹 grp1의 최대우선순위를 3으로 변경
+
+        Runnable r = new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {}
+            }
+        };
+
+        // Thread(ThreadGroup tg, Runnable r, String name)
+        new Thread(grp1, r, "th1").start(); // grp1쓰레드 그룹의 th1이라는 쓰레드 생성 후 start
+        new Thread(subGrp1, r, "th2").start();
+        new Thread(grp2, r, "th3").start();
+
+        System.out.println(">>List of ThreadGroup: "+ main.getName() + ", Active ThreadGroup: "+main.activeCount()
+        +", Active Thread: "+main.activeCount());
+
+        main.list();
+    }
+
+}
+```
+#### 실행결과
+```
+>>List of ThreadGroup: main, Active ThreadGroup: 5, Active Thread: 5
+java.lang.ThreadGroup[name=main,maxpri=10]
+    Thread[main,5,main]
+    Thread[Monitor Ctrl-Break,5,main]
+    java.lang.ThreadGroup[name=Group1,maxpri=3]
+        Thread[th1,3,Group1]
+        java.lang.ThreadGroup[name=SubGroup1,maxpri=3]
+            Thread[th2,3,SubGroup1]
+    java.lang.ThreadGroup[name=Group2,maxpri=10]
+        Thread[th3,5,Group2]
+```
+- 결과를 보면 쓰레드 그룹에 포함된 하위 쓰레드 그룹이나 쓰레드는 들여쓰기를 이용해서 구별되어진다.
+
+### 데몬쓰레드
+
+데몬쓰레드는 다른 일반 쓰레드의 작업을 돕는 보조적인 역할을 한다.
+일반 쓰레드가 모두 종료되면 데몬 쓰레드는 강제적으로 자동종료된다.
+
+ex) 가비지 컬렉터, 워드프로세서의 자동저장, 화면자동갱신 등이 있다.
+
+```java
+package Chapter13.day36;
+
+public class ThreadEx10 implements Runnable{
+    static boolean autoSave = false;
+
+    public static void main(String[] args) {
+        Thread t = new Thread(new ThreadEx10());    // Runnable 구현한 클래스를 통해 쓰레드 생성
+        t.setDaemon(true);  // 이 부분이 없으면 종료되지 않는다.
+        t.start();  // start() 전에 setDaemon 메서드를 실행해야 한다.
+
+        for (int i = 1; i <= 10; i++) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {}
+
+            System.out.println(i);
+
+            if (i == 5) {
+                autoSave = true;
+            }
+        }
+
+        System.out.println("프로그램을 종료합니다.");
+    }
+
+    public void run() {
+        while (true) {
+            try {
+                Thread.sleep(3 * 1000);
+            } catch (InterruptedException e) {}
+
+            // autoSave의 값이 true면 autoSave()를 호출한다.
+            if (autoSave)
+                autoSave();
+        }
+    }
+
+    public void autoSave() {
+        System.out.println("작업 파일이 저장되었습니다.");
+    }
+}
+```
+#### 실행결과
+```
+1
+2
+3
+4
+5
+작업 파일이 저장되었습니다.
+6
+7
+8
+작업 파일이 저장되었습니다.
+9
+10
+프로그램을 종료합니다.
+```
+
+- setDaemon메서드는 반드시 start()를 호출하기 전에 실행되어야 한다. 그렇지 않으면 IllegalThreadStateException이 발생한다.
